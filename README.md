@@ -1,2 +1,2 @@
 # codewars
-coding challenge solutions
+Assortment of coding challenges solutions done for practice
