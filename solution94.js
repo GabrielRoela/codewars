@@ -77,5 +77,3 @@ function probability(length, num){
 
     console.log(counter / (max - min + 1) * 100)
 }
-
-probability(1,2)
