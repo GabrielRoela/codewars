@@ -75,5 +75,5 @@ function probability(length, num){
         i % num == 0 ? counter++ : 'we'
     }
 
-    console.log(counter / (max - min + 1) * 100)
+    return counter / (max - min + 1) * 100
 }
