@@ -72,7 +72,10 @@ function probability(length, num){
     }
 
     for(let i = min; i<=max; i++){
-        i % num == 0 ? counter++ : 'we'
+        if(i % num == 0){
+            counter++
+            i+=num-1
+        }
     }
 
     return counter / (max - min + 1) * 100
