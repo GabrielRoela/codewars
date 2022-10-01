@@ -48,4 +48,3 @@ function consonantValue(s) {
     // last step we return the greater value in the array
     return consonantStringsValue.sort((a,b) => b-a)[0]
 };
-
