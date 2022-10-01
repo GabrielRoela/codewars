@@ -41,12 +41,11 @@ function consonantValue(s) {
     if (middleware.length > 0) {
         consonantStrings.push(middleware.splice(0).join(''))
     }
-
+    // now we map our consonantStrings into their value, for this we get each substring, turn it into an array, get the charCodeAt of each, make sure to subtract 96 so we get the correct value (a = 1, b = 2.... z = 26) and add them up to get the total value of each substring
     let consonantStringsValue = consonantStrings.map(e => e.split('').reduce((acc,_,index,array) => {
         return acc + (array.join('').charCodeAt(index) - 96)
     },0))
-
+    // last step we return the greater value in the array
     return consonantStringsValue.sort((a,b) => b-a)[0]
 };
 
-console.log(consonantValue("strength"))
