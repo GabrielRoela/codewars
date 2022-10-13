@@ -20,7 +20,6 @@ function pigLatin(word){
                 break
             }
         }
-        console.log(firstVowel);
-        return word.slice(firstVowel) + word.slice(0,firstVowel) + 'way'
+        return word.slice(firstVowel) + word.slice(0,firstVowel) + 'ay'
     }
 }
