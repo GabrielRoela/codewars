@@ -28,17 +28,26 @@
 // -109 <= target <= 109
 // Only one valid answer exists.
 
+// var twoSum = function(nums, target) {
+//     for(let i = 0; i < nums.length; i++){
+//         let sweetNum = target - nums[i]
+//         if(nums[i] === sweetNum){
+//             if(nums.indexOf(sweetNum) !== nums.lastIndexOf(sweetNum)){
+//                 return [nums.indexOf(sweetNum), nums.lastIndexOf(sweetNum)]
+//             }
+//         }else{
+//             if(nums.includes(sweetNum)){
+//                 return [i, nums.indexOf(sweetNum)]
+//             }
+//         }
+//     }
+// }
+
 var twoSum = function(nums, target) {
     for(let i = 0; i < nums.length; i++){
         let sweetNum = target - nums[i]
-        if(nums[i] === sweetNum){
-            if(nums.indexOf(sweetNum) !== nums.lastIndexOf(sweetNum)){
-                return [nums.indexOf(sweetNum), nums.lastIndexOf(sweetNum)]
-            }
-        }else{
-            if(nums.includes(sweetNum)){
-                return [i, nums.indexOf(sweetNum)]
-            }
+        if(nums.includes(sweetNum) && nums.lastIndexOf(sweetNum) != i){
+            return[i,nums.lastIndexOf(sweetNum)]
         }
     }
 }
